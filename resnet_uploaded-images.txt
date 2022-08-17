@@ -1,0 +1,91 @@
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = resnet 
+ dogfile = dognames.txt
+
+Pet Image Label Dictionary has 4 key-value pairs.
+Below are 4 of them:
+ 1 key:                     Cup_01.jpg  label:                        cup
+ 2 key:                    Frog_01.jpg  label:                       frog
+ 3 key:                     Dog_02.jpg  label:                        dog
+ 4 key:                     Dog_01.jpg  label:                        dog
+
+Results from test_classifier.py
+Image: uploaded_images//Cup_01.jpg using model: resnet was classified as a: caldron, cauldron match 0
+
+Results from test_classifier.py
+Image: uploaded_images//Frog_01.jpg using model: resnet was classified as a: tree frog, tree-frog match 1
+
+Results from test_classifier.py
+Image: uploaded_images//Dog_02.jpg using model: resnet was classified as a: golden retriever match 0
+
+Results from test_classifier.py
+Image: uploaded_images//Dog_01.jpg using model: resnet was classified as a: golden retriever match 0
+
+     MATCH:
+
+                   Frog_01.jpg: 
+Real:                       frog   Classifier:           tree frog, tree-frog
+
+ NOT A MATCH:
+
+                    Cup_01.jpg: 
+Real:                        cup   Classifier:              caldron, cauldron
+
+                    Dog_02.jpg: 
+Real:                        dog   Classifier:               golden retriever
+
+                    Dog_01.jpg: 
+Real:                        dog   Classifier:               golden retriever
+
+# Total Images 4 # Matches: 1 # NOT Matches: 3
+Open dognames.txt and start reading...
+Close dognames.txt and stop reading! Dogs name found 224
+
+     MATCH:
+
+                   Frog_01.jpg: 
+Real:                       frog   Classifier:           tree frog, tree-frog  
+PetLabelDog: 0  ClassLabelDog: 0
+
+ NOT A MATCH:
+
+                    Cup_01.jpg: 
+Real:                        cup   Classifier:              caldron, cauldron  
+PetLabelDog: 0  ClassLabelDog: 0
+
+                    Dog_02.jpg: 
+Real:                        dog   Classifier:               golden retriever  
+PetLabelDog: 1  ClassLabelDog: 1
+
+                    Dog_01.jpg: 
+Real:                        dog   Classifier:               golden retriever  
+PetLabelDog: 1  ClassLabelDog: 1
+
+# Total Images 4 # Matches: 1 # NOT Matches: 3
+result_dic {'Cup_01.jpg': ['cup', 'caldron, cauldron', 0, 0, 0], 'Frog_01.jpg': ['frog', 'tree frog, tree-frog', 1, 0, 0], 'Dog_02.jpg': ['dog', 'golden retriever', 0, 1, 1], 'Dog_01.jpg': ['dog', 'golden retriever', 0, 1, 1]}
+
+ ** Statistics from calculates_results_stats() function:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:   0.0
+
+ ** Check Statistics - calculated from this function as a check:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:   0.0
+
+
+*** Results Summary for CNN Model Architecture RESNET ***
+N Images            :   4
+N Dog Images        :   2
+
+ 
+pct_match : 25.0
+pct_correct_dogs : 100.0
+pct_correct_breed : 0.0
+pct_correct_notdogs : 100.0
+
+INCORRECT Dog Breed Assignment:
+Real:                        dog   Classifier:               golden retriever
+Real:                        dog   Classifier:               golden retriever
+
+** Total Elapsed Runtime: 0:0:0
