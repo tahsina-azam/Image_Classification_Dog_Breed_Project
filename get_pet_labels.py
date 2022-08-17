@@ -65,9 +65,9 @@ def get_pet_labels(image_dir):
 
             # Strip off starting/trailing whitespace characters 
             pet_label = pet_name.strip()
-        if img_files[idx] not in results_dic:
-              results_dic[img_files[idx]] = [pet_label]
-        else:
-               print("** Warning: Duplicate files exist in directory:", 
-                     img_files[idx])        
+            if img_files[idx] not in results_dic:
+                results_dic[img_files[idx]] = [pet_label]
+            else:
+                print("** Warning: Duplicate files exist in directory:", 
+                         img_files[idx])        
     return results_dic
